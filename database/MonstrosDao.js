@@ -18,6 +18,11 @@ Monstros.prototype.getMonsterById = function (monsterId, callback) {
     this._connection.query("SELECT * FROM monstros WHERE monsterId = ?", monsterId, callback);
 };
 
+// Busca todos os monstros
+Monstros.prototype.getAllMonsters = function(callback) {
+    this._connection.query("SELECT * FROM Monstros", callback);
+};
+
 module.exports = function(){
     return Monstros; // Retorna a classe
 };
